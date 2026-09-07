@@ -195,7 +195,6 @@ class Testi(val lingua: Lingua) {
     val autoreVoce = if (en) "👤 Author" else "👤 Autore"
     val autoreTitolo = if (en) "Author" else "Autore"
     val autoreRuolo = if (en) "Creator of this app" else "Ideatore di questa app"
-    val autoreDedica = if (en) "💙 To my brave friend Katarina, who loves nature, the sea, my stories, and above all the little beach of Santo Liberale." else "💙 Alla mia coraggiosa amica Katarina che ama la natura, il mare, i miei racconti e soprattutto la spiaggetta di Santo Liberale."
 
     fun letturaSalvata(abbrev: String, gradi: String, conPosizione: Boolean): String {
         val extra = if (conPosizione) " 📍" else ""
@@ -1463,19 +1462,6 @@ fun AutoreScreen(onIndietro: () -> Unit) {
         )
 
         Spacer(modifier = Modifier.height(24.dp))
-
-        Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color(0xFFF0F4FF))) {
-            Text(
-                text = t.autoreDedica,
-                fontSize = 15.sp,
-                lineHeight = 22.sp,
-                fontStyle = FontStyle.Italic,
-                fontWeight = FontWeight.Medium,
-                color = Color(0xFF1A2B4C),
-                textAlign = TextAlign.Center,
-                modifier = Modifier.padding(20.dp)
-            )
-        }
 
         Spacer(modifier = Modifier.height(20.dp))
     }
